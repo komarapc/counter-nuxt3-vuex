@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full min-h-screen flex flex-col items-center justify-center">
+  <div
+    class="w-full min-h-screen flex flex-col items-center justify-center bg-blue-50"
+  >
     <div class="flex flex-col gap-4 items-center">
       <span class="text-6xl">
         <span class="text-emerald-500 font-bold">NuxtJS</span> +
@@ -31,6 +33,12 @@
         @click="$store.dispatch('increment', limit)"
       >
         +
+      </button>
+      <button
+        class="px-4 py-2 rounded bg-orange-500 text-white text-lg"
+        @click="$store.dispatch('resetCounter')"
+      >
+        Reset
       </button>
     </div>
     <div class="flex flex-col items-center my-5">
