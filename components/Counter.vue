@@ -1,13 +1,22 @@
 <template>
   <div
-    class="w-full min-h-screen flex flex-col items-center justify-center transition duration-300 ease-in-out"
+    class="w-full min-h-screen flex flex-col items-center transition duration-300 ease-in-out"
     :class="
       $store.state.theme.darkMode
         ? 'bg-gray-900 text-neutral-200'
         : 'bg-blue-50'
     "
   >
-    <ToggleTheme />
+    <div class="flex items-center justify-between w-full h-16 px-5">
+      <div>
+        <NuxtLink to="/">
+          <Icon name="ion:chevron-back" class="text-3xl" />
+        </NuxtLink>
+      </div>
+      <div>
+        <ToggleTheme />
+      </div>
+    </div>
     <div class="flex flex-col gap-4 items-center">
       <span class="flex text-6xl space-x-10">
         <span class="text-emerald-500 font-bold">NuxtJS</span>
