@@ -9,9 +9,9 @@
   >
     <ToggleTheme />
     <div class="flex flex-col gap-4 items-center">
-      <span class="text-6xl">
-        <span class="text-emerald-500 font-bold">NuxtJS</span> +
-        <span class="text-emerald-500">Vuex</span> +
+      <span class="flex text-6xl space-x-10">
+        <span class="text-emerald-500 font-bold">NuxtJS</span>
+        <span class="text-emerald-500">Vuex</span>
         <span class="text-blue-400">TailwindCSS</span>
       </span>
       <span class="text-4xl font-light">Counter</span>
