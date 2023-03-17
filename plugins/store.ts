@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import theme from "./theme";
 
 const store = createStore({
   state() {
@@ -27,6 +28,10 @@ const store = createStore({
     resetCounter(context) {
       context.commit("resetCounter");
     },
+  },
+  modules: {
+    // Add modules here
+    theme: theme,
   },
 });
 

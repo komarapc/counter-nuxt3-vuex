@@ -1,7 +1,13 @@
 <template>
   <div
-    class="w-full min-h-screen flex flex-col items-center justify-center bg-blue-50"
+    class="w-full min-h-screen flex flex-col items-center justify-center transition duration-300 ease-in-out"
+    :class="
+      $store.state.theme.darkMode
+        ? 'bg-gray-900 text-neutral-200'
+        : 'bg-blue-50'
+    "
   >
+    <ToggleTheme />
     <div class="flex flex-col gap-4 items-center">
       <span class="text-6xl">
         <span class="text-emerald-500 font-bold">NuxtJS</span> +
@@ -46,7 +52,7 @@
       <input
         type="number"
         v-model="limit"
-        class="w-full h-10 text-center text-neutral-500 border border-neutral-300 outline-none"
+        class="w-full h-10 text-center text-neutral-500 border border-neutral-300 rounded-lg outline-none"
       />
     </div>
   </div>
@@ -65,8 +71,6 @@ export default {
       required: false,
     },
   },
-  mounted() {
-    console.log(this.greeting);
-  },
+  mounted() {},
 };
 </script>
